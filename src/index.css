@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional Dashboard Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Dashboard Color Palette */
+    --background: 218 23% 97%;
+    --foreground: 220 13% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 70%;
+
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 220 13% 18%;
+
+    --muted: 214 32% 94%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 214 32% 91%;
+    --accent-foreground: 220 13% 18%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+
+    /* Dashboard specific colors */
+    --dashboard-bg: 218 23% 97%;
+    --dashboard-sidebar: 0 0% 100%;
+    --dashboard-hover: 214 32% 91%;
+    --dashboard-active: 217 91% 95%;
+    --dashboard-text-secondary: 215 16% 47%;
+    
+    /* Content category colors */
+    --news-accent: 43 96% 56%;
+    --movies-accent: 262 83% 58%;
+    --social-accent: 142 76% 36%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(214 32% 98%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(262 83% 58%) 50%, hsl(142 76% 36%) 100%);
+    
+    /* Shadows */
+    --shadow-card: 0 1px 3px 0 hsl(220 13% 18% / 0.1), 0 1px 2px 0 hsl(220 13% 18% / 0.06);
+    --shadow-hover: 0 4px 6px -1px hsl(220 13% 18% / 0.1), 0 2px 4px -1px hsl(220 13% 18% / 0.06);
+    --shadow-glow: 0 0 20px hsl(217 91% 60% / 0.3);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode dashboard colors */
+    --background: 220 13% 9%;
+    --foreground: 213 31% 91%;
+
+    --card: 220 13% 12%;
+    --card-foreground: 213 31% 91%;
+
+    --popover: 220 13% 12%;
+    --popover-foreground: 213 31% 91%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 70%;
+
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 213 31% 91%;
+
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 10% 65%;
+
+    --accent: 215 28% 17%;
+    --accent-foreground: 213 31% 91%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 213 31% 91%;
+
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 217 91% 60%;
+
+    /* Dark dashboard specific colors */
+    --dashboard-bg: 220 13% 9%;
+    --dashboard-sidebar: 220 13% 12%;
+    --dashboard-hover: 215 28% 17%;
+    --dashboard-active: 217 91% 15%;
+    --dashboard-text-secondary: 217 10% 65%;
+    
+    /* Dark mode gradients */
+    --gradient-card: linear-gradient(145deg, hsl(220 13% 12%), hsl(215 28% 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(262 83% 58%) 50%, hsl(142 76% 36%) 100%);
+    
+    /* Dark mode shadows */
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.3), 0 1px 2px 0 hsl(0 0% 0% / 0.2);
+    --shadow-hover: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+
+    --sidebar-background: 220 13% 12%;
+    --sidebar-foreground: 213 31% 91%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 28% 17%;
+    --sidebar-accent-foreground: 213 31% 91%;
+    --sidebar-border: 215 28% 17%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-dashboard-bg text-foreground font-sans antialiased;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground;
+  }
+}
+
+@layer utilities {
+  /* Dashboard utilities */
+  .dashboard-card {
+    @apply bg-gradient-to-br from-card to-card/80 border border-border/50 rounded-xl shadow-card hover:shadow-hover transition-all duration-200;
+  }
+
+  .dashboard-sidebar {
+    @apply bg-dashboard-sidebar border-r border-border/50;
+  }
+
+  .content-card {
+    @apply dashboard-card p-6 hover:scale-[1.02] cursor-pointer;
+  }
+
+  .category-news {
+    @apply border-l-4 border-l-news-accent;
+  }
+
+  .category-movies {
+    @apply border-l-4 border-l-movies-accent;
+  }
+
+  .category-social {
+    @apply border-l-4 border-l-social-accent;
+  }
+
+  /* Animations */
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.3s ease-out;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
