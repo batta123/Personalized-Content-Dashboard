@@ -1,6 +1,8 @@
 # 📊 Personalized Content Dashboard
 
 A dynamic and interactive dashboard where users can view, search, and organize personalized content such as news, recommendations, and social media posts. Built using **React**, **Next.js**, **TypeScript**, **Redux Toolkit**, and modern web development tools. The application emphasizes user customization, state management, smooth UI interactions, and robust testing practices.
+You can go live here 
+https://personalized-content-dashb.netlify.app/
 
 ---
 
@@ -60,18 +62,18 @@ The Personalized Content Dashboard is designed to demonstrate best practices in 
 
 ## 📂 Project Structure
 
-personalized-content-dashboard/
-├── public/ # Static assets like images and icons
-├── src/
-│ ├── components/ # Reusable UI components (Feed, Card, Sidebar, etc.)
-│ ├── features/ # Redux slices, async logic, and API handling
-│ ├── pages/ # Next.js pages and API routes
-│ ├── styles/ # Tailwind CSS configuration and global styles
-│ └── utils/ # Helper functions, API clients
-├── tests/ # Unit, integration, and end-to-end tests
-├── .env.local # Environment variables (API keys)
-├── README.md # Project documentation
-└── package.json # Project metadata and dependencies
+       personalized-content-dashboard/
+            ├── public/ # Static assets like images and icons
+            ├── src/
+            │ ├── components/ # Reusable UI components (Feed, Card, Sidebar, etc.)
+            │ ├── features/ # Redux slices, async logic, and API handling
+            │ ├── pages/ # Next.js pages and API routes
+            │ ├── styles/ # Tailwind CSS configuration and global styles
+            │ └── utils/ # Helper functions, API clients
+            ├── tests/ # Unit, integration, and end-to-end tests
+            ├── .env.local # Environment variables (API keys)
+            ├── README.md # Project documentation
+            └── package.json # Project metadata and dependencies
 
 
 ---
