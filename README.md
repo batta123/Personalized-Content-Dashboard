@@ -1,8 +1,11 @@
 # 📊 Personalized Content Dashboard
 
 A dynamic and interactive dashboard where users can view, search, and organize personalized content such as news, recommendations, and social media posts. Built using **React**, **Next.js**, **TypeScript**, **Redux Toolkit**, and modern web development tools. The application emphasizes user customization, state management, smooth UI interactions, and robust testing practices.
-You can go live here 
-https://personalized-content-dashb.netlify.app/
+
+## 🔗 Live Demo
+
+<a href="https://personalized-content-dashb.netlify.app/" target="_blank">Click here to view the live project</a>
+
 
 ---
 
