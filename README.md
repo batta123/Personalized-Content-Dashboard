@@ -60,15 +60,18 @@ The Personalized Content Dashboard is designed to demonstrate best practices in 
 
 ## 📂 Project Structure
 
-/public - Static assets like images and icons
-/src
-/components - UI components such as Feed, Card, Sidebar
-/features - Redux slices and async logic
-/pages - Next.js pages and API handlers
-/styles - Tailwind CSS configuration
-/utils - Helper functions, API clients
-/tests - Unit, integration, and E2E tests
-README.md - Project documentation
+personalized-content-dashboard/
+├── public/ # Static assets like images and icons
+├── src/
+│ ├── components/ # Reusable UI components (Feed, Card, Sidebar, etc.)
+│ ├── features/ # Redux slices, async logic, and API handling
+│ ├── pages/ # Next.js pages and API routes
+│ ├── styles/ # Tailwind CSS configuration and global styles
+│ └── utils/ # Helper functions, API clients
+├── tests/ # Unit, integration, and end-to-end tests
+├── .env.local # Environment variables (API keys)
+├── README.md # Project documentation
+└── package.json # Project metadata and dependencies
 
 
 ---
